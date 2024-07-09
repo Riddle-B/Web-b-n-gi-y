@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DataHuynhQuocBaoModelStoreContainer" CdmEntityContainer="DataHuynhQuocBaoEntities">
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DataHuynhQuocBaoModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DataHuynhQuocBaoModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DataHuynhQuocBaoModel.Store.sp_upgraddiagrams" />
+    <FunctionImportMapping FunctionImportName="getloaisp" FunctionName="DataHuynhQuocBaoModel.Store.getloaisp">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.getloaisp_Result">
+          <ScalarProperty Name="IDLoai" ColumnName="IDLoai" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+          <ScalarProperty Name="Anh" ColumnName="Anh" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="LoaiSP">
+      <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.LoaiSP">
+        <MappingFragment StoreEntitySet="LoaiSP">
+          <ScalarProperty Name="Anh" ColumnName="Anh" />
+          <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+          <ScalarProperty Name="IDLoai" ColumnName="IDLoai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Order">
+      <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.Order">
+        <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ShipEmail" ColumnName="ShipEmail" />
+          <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+          <ScalarProperty Name="ShipMobile" ColumnName="ShipMobile" />
+          <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OrderDetail">
+      <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.OrderDetail">
+        <MappingFragment StoreEntitySet="OrderDetail">
+          <ScalarProperty Name="Price" ColumnName="Price" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SanPham">
+      <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.SanPham">
+        <MappingFragment StoreEntitySet="SanPham">
+          <ScalarProperty Name="IDLoai" ColumnName="IDLoai" />
+          <ScalarProperty Name="Gia" ColumnName="Gia" />
+          <ScalarProperty Name="Hinh" ColumnName="Hinh" />
+          <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserGroup">
+      <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.UserGroup">
+        <MappingFragment StoreEntitySet="UserGroup">
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="getuser" FunctionName="DataHuynhQuocBaoModel.Store.getuser">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.getuser_Result">
+          <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

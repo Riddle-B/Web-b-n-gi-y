@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DoAnHuynhQuocBao.Models.SanPham>
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="container body-content" style="display:flex; margin-top: 25px; margin-bottom:50px">
+    <img src="~/Upload/QCHome.gif" style="width:100%; height:10%" />
+</div>
+
+
+<section class="categories">
+    <div class="container">
+        <div class="row">
+            @* SLIDER *@
+            <div class="categories__slider owl-carousel">
+                @foreach (var item in ViewBag.lstsp)
+                {
+                    <div class="col-lg-12">
+                        <div class="categories__item set-bg" data-setbg="/Upload/@item.Anh">
+                            <h5><a href="~/Home/Index?idlsp=@item.IDLoai">@item.TenLoai</a></h5>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<h2 style="display:block;width:100%">All shoes</h2>
+<div class="row" style="margin-bottom:30px">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-4" style="width:24.33%; position: relative; margin-top: 30px">
+            <div class="thumbnail">
+                <div style="width: 100%;height: 440px"><a><img src="~/Upload/@item.Hinh" style="object-fit: fill; width: 100%; height: 100%" /></a></div>
+                <div class="caption">@item.TenSP</div>
+                <div class="caption">@item.Gia₫</div>
+                <div style="position: absolute; bottom: 9px; right: 30px;">
+                    <a href="~/Cart/AddItem?productId=@item.ID&quantity=1" class="adtocart">
+                        <span style="font-size: 20px" class="glyphicon glyphicon-shopping-cart"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

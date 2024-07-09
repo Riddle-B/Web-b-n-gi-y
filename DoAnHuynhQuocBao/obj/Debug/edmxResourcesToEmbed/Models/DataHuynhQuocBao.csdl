@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DataHuynhQuocBaoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="DataHuynhQuocBaoEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DataHuynhQuocBaoModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DataHuynhQuocBaoModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="getallLSP" ReturnType="Collection(DataHuynhQuocBaoModel.getallLSP_Result)" />
+    <FunctionImport Name="getloaisp" ReturnType="Collection(DataHuynhQuocBaoModel.getloaisp_Result)" />
+    <EntitySet Name="LoaiSP" EntityType="DataHuynhQuocBaoModel.LoaiSP" />
+    <EntitySet Name="Order" EntityType="DataHuynhQuocBaoModel.Order" />
+    <EntitySet Name="OrderDetail" EntityType="DataHuynhQuocBaoModel.OrderDetail" />
+    <EntitySet Name="SanPham" EntityType="DataHuynhQuocBaoModel.SanPham" />
+    <EntitySet Name="User" EntityType="DataHuynhQuocBaoModel.User" />
+    <EntitySet Name="UserGroup" EntityType="DataHuynhQuocBaoModel.UserGroup" />
+    <AssociationSet Name="FK_SanPham_LoaiSP" Association="DataHuynhQuocBaoModel.FK_SanPham_LoaiSP">
+      <End Role="LoaiSP" EntitySet="LoaiSP" />
+      <End Role="SanPham" EntitySet="SanPham" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Order" Association="DataHuynhQuocBaoModel.FK_OrderDetail_Order">
+      <End Role="Order" EntitySet="Order" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_SanPham" Association="DataHuynhQuocBaoModel.FK_OrderDetail_SanPham">
+      <End Role="SanPham" EntitySet="SanPham" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_UserGroup" Association="DataHuynhQuocBaoModel.FK_User_UserGroup">
+      <End Role="UserGroup" EntitySet="UserGroup" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <FunctionImport Name="getuser" ReturnType="Collection(DataHuynhQuocBaoModel.getuser_Result)">
+      <Parameter Name="username" Mode="In" Type="String" />
+      <Parameter Name="pass" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="getallLSP_Result">
+    <Property Type="Int32" Name="IDLoai" Nullable="false" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="100" />
+  </ComplexType>
+  <ComplexType Name="getloaisp_Result">
+    <Property Type="Int32" Name="IDLoai" Nullable="false" />
+    <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="Anh" Nullable="true" MaxLength="255" />
+  </ComplexType>
+  <EntityType Name="LoaiSP">
+    <Key>
+      <PropertyRef Name="IDLoai" />
+    </Key>
+    <Property Name="IDLoai" Type="Int32" Nullable="false" />
+    <Property Name="TenLoai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Anh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SanPham" Relationship="DataHuynhQuocBaoModel.FK_SanPham_LoaiSP" FromRole="LoaiSP" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="Order">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="CustomerID" Type="Int32" />
+    <Property Name="ShipName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ShipMobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="ShipAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ShipEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="OrderDetail" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="OrderDetail">
+    <Key>
+      <PropertyRef Name="ProductID" />
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="ProductID" Type="Int32" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Price" Type="Double" />
+    <NavigationProperty Name="Order" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+    <NavigationProperty Name="SanPham" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_SanPham" FromRole="OrderDetail" ToRole="SanPham" />
+  </EntityType>
+  <EntityType Name="SanPham">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TenSP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Hinh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Gia" Type="Double" />
+    <Property Name="IDLoai" Type="Int32" />
+    <NavigationProperty Name="LoaiSP" Relationship="DataHuynhQuocBaoModel.FK_SanPham_LoaiSP" FromRole="SanPham" ToRole="LoaiSP" />
+    <NavigationProperty Name="OrderDetail" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_SanPham" FromRole="SanPham" ToRole="OrderDetail" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="IDUser" />
+    </Key>
+    <Property Name="IDUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Pass" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="GroupID" Type="Int32" />
+    <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="UserGroup" Relationship="DataHuynhQuocBaoModel.FK_User_UserGroup" FromRole="User" ToRole="UserGroup" />
+  </EntityType>
+  <EntityType Name="UserGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="User" Relationship="DataHuynhQuocBaoModel.FK_User_UserGroup" FromRole="UserGroup" ToRole="User" />
+  </EntityType>
+  <Association Name="FK_SanPham_LoaiSP">
+    <End Type="DataHuynhQuocBaoModel.LoaiSP" Role="LoaiSP" Multiplicity="0..1" />
+    <End Type="DataHuynhQuocBaoModel.SanPham" Role="SanPham" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="LoaiSP">
+        <PropertyRef Name="IDLoai" />
+      </Principal>
+      <Dependent Role="SanPham">
+        <PropertyRef Name="IDLoai" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_Order">
+    <End Type="DataHuynhQuocBaoModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="DataHuynhQuocBaoModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Order">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="OrderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderDetail_SanPham">
+    <End Type="DataHuynhQuocBaoModel.SanPham" Role="SanPham" Multiplicity="1" />
+    <End Type="DataHuynhQuocBaoModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SanPham">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_UserGroup">
+    <End Type="DataHuynhQuocBaoModel.UserGroup" Role="UserGroup" Multiplicity="0..1" />
+    <End Type="DataHuynhQuocBaoModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UserGroup">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="getuser_Result">
+    <Property Type="Int32" Name="IDUser" Nullable="false" />
+    <Property Type="String" Name="UserName" Nullable="true" MaxLength="300" />
+    <Property Type="String" Name="Pass" Nullable="true" MaxLength="300" />
+    <Property Type="Int32" Name="GroupID" Nullable="true" />
+    <Property Type="String" Name="Name" Nullable="true" MaxLength="300" />
+  </ComplexType>
+</Schema>

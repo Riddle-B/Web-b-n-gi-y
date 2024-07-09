@@ -1,0 +1,515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DataHuynhQuocBaoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="LoaiSP">
+          <Key>
+            <PropertyRef Name="IDLoai" />
+          </Key>
+          <Property Name="IDLoai" Type="int" Nullable="false" />
+          <Property Name="TenLoai" Type="nvarchar" MaxLength="100" />
+          <Property Name="Anh" Type="nvarchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="CustomerID" Type="int" />
+          <Property Name="ShipName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ShipMobile" Type="nvarchar" MaxLength="10" />
+          <Property Name="ShipAddress" Type="nvarchar" MaxLength="255" />
+          <Property Name="ShipEmail" Type="nvarchar" MaxLength="50" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="ProductID" Type="int" Nullable="false" />
+          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="Price" Type="float" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TenSP" Type="nvarchar" MaxLength="255" />
+          <Property Name="Hinh" Type="nvarchar" MaxLength="255" />
+          <Property Name="Gia" Type="float" />
+          <Property Name="IDLoai" Type="int" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserName" Type="nvarchar" MaxLength="300" />
+          <Property Name="Pass" Type="nvarchar" MaxLength="300" />
+          <Property Name="GroupID" Type="int" />
+          <Property Name="Name" Type="nvarchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="UserGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <Association Name="FK_OrderDetail_Order">
+          <End Role="Order" Type="Self.Order" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_SanPham">
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_SanPham_LoaiSP">
+          <End Role="LoaiSP" Type="Self.LoaiSP" Multiplicity="0..1" />
+          <End Role="SanPham" Type="Self.SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSP">
+              <PropertyRef Name="IDLoai" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="IDLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserGroup">
+          <End Role="UserGroup" Type="Self.UserGroup" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+        <Function Name="getloaisp" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getuser" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="pass" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+          <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+        </Function>
+        <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+          <Parameter Name="owner_id" Type="int" Mode="In" />
+          <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <EntityContainer Name="DataHuynhQuocBaoModelStoreContainer">
+          <EntitySet Name="LoaiSP" EntityType="Self.LoaiSP" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="OrderDetail" EntityType="Self.OrderDetail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SanPham" EntityType="Self.SanPham" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_OrderDetail_Order" Association="Self.FK_OrderDetail_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_SanPham" Association="Self.FK_OrderDetail_SanPham">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_SanPham_LoaiSP" Association="Self.FK_SanPham_LoaiSP">
+            <End Role="LoaiSP" EntitySet="LoaiSP" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserGroup" Association="Self.FK_User_UserGroup">
+            <End Role="UserGroup" EntitySet="UserGroup" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DataHuynhQuocBaoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="DataHuynhQuocBaoEntities" annotation:LazyLoadingEnabled="true">
+          <FunctionImport Name="sp_alterdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_creatediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="version" Mode="In" Type="Int32" />
+            <Parameter Name="definition" Mode="In" Type="Binary" />
+          </FunctionImport>
+          <FunctionImport Name="sp_dropdiagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(DataHuynhQuocBaoModel.sp_helpdiagramdefinition_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(DataHuynhQuocBaoModel.sp_helpdiagrams_Result)">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="sp_renamediagram">
+            <Parameter Name="diagramname" Mode="In" Type="String" />
+            <Parameter Name="owner_id" Mode="In" Type="Int32" />
+            <Parameter Name="new_diagramname" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="sp_upgraddiagrams" />
+          <FunctionImport Name="getallLSP" ReturnType="Collection(DataHuynhQuocBaoModel.getallLSP_Result)" />
+          <FunctionImport Name="getloaisp" ReturnType="Collection(DataHuynhQuocBaoModel.getloaisp_Result)" />
+          <EntitySet Name="LoaiSP" EntityType="DataHuynhQuocBaoModel.LoaiSP" />
+          <EntitySet Name="Order" EntityType="DataHuynhQuocBaoModel.Order" />
+          <EntitySet Name="OrderDetail" EntityType="DataHuynhQuocBaoModel.OrderDetail" />
+          <EntitySet Name="SanPham" EntityType="DataHuynhQuocBaoModel.SanPham" />
+          <EntitySet Name="User" EntityType="DataHuynhQuocBaoModel.User" />
+          <EntitySet Name="UserGroup" EntityType="DataHuynhQuocBaoModel.UserGroup" />
+          <AssociationSet Name="FK_SanPham_LoaiSP" Association="DataHuynhQuocBaoModel.FK_SanPham_LoaiSP">
+            <End Role="LoaiSP" EntitySet="LoaiSP" />
+            <End Role="SanPham" EntitySet="SanPham" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Order" Association="DataHuynhQuocBaoModel.FK_OrderDetail_Order">
+            <End Role="Order" EntitySet="Order" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_SanPham" Association="DataHuynhQuocBaoModel.FK_OrderDetail_SanPham">
+            <End Role="SanPham" EntitySet="SanPham" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_UserGroup" Association="DataHuynhQuocBaoModel.FK_User_UserGroup">
+            <End Role="UserGroup" EntitySet="UserGroup" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <FunctionImport Name="getuser" ReturnType="Collection(DataHuynhQuocBaoModel.getuser_Result)">
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="pass" Mode="In" Type="String" />
+          </FunctionImport>
+          </EntityContainer>
+        <ComplexType Name="sp_helpdiagramdefinition_Result">
+          <Property Type="Int32" Name="version" Nullable="true" />
+          <Property Type="Binary" Name="definition" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="sp_helpdiagrams_Result">
+          <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+          <Property Type="Int32" Name="OwnerID" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="getallLSP_Result">
+          <Property Type="Int32" Name="IDLoai" Nullable="false" />
+          <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="100" />
+        </ComplexType>
+        <ComplexType Name="getloaisp_Result">
+          <Property Type="Int32" Name="IDLoai" Nullable="false" />
+          <Property Type="String" Name="TenLoai" Nullable="true" MaxLength="100" />
+          <Property Type="String" Name="Anh" Nullable="true" MaxLength="255" />
+        </ComplexType>
+        <EntityType Name="LoaiSP">
+          <Key>
+            <PropertyRef Name="IDLoai" />
+          </Key>
+          <Property Name="IDLoai" Type="Int32" Nullable="false" />
+          <Property Name="TenLoai" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Anh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="SanPham" Relationship="DataHuynhQuocBaoModel.FK_SanPham_LoaiSP" FromRole="LoaiSP" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="Order">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="CustomerID" Type="Int32" />
+          <Property Name="ShipName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ShipMobile" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ShipAddress" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="ShipEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="OrderDetail" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="OrderDetail">
+          <Key>
+            <PropertyRef Name="ProductID" />
+            <PropertyRef Name="OrderID" />
+          </Key>
+          <Property Name="ProductID" Type="Int32" Nullable="false" />
+          <Property Name="OrderID" Type="Int32" Nullable="false" />
+          <Property Name="Quantity" Type="Int32" />
+          <Property Name="Price" Type="Double" />
+          <NavigationProperty Name="Order" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="SanPham" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_SanPham" FromRole="OrderDetail" ToRole="SanPham" />
+        </EntityType>
+        <EntityType Name="SanPham">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TenSP" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Hinh" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="Gia" Type="Double" />
+          <Property Name="IDLoai" Type="Int32" />
+          <NavigationProperty Name="LoaiSP" Relationship="DataHuynhQuocBaoModel.FK_SanPham_LoaiSP" FromRole="SanPham" ToRole="LoaiSP" />
+          <NavigationProperty Name="OrderDetail" Relationship="DataHuynhQuocBaoModel.FK_OrderDetail_SanPham" FromRole="SanPham" ToRole="OrderDetail" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="Pass" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="GroupID" Type="Int32" />
+          <Property Name="Name" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="UserGroup" Relationship="DataHuynhQuocBaoModel.FK_User_UserGroup" FromRole="User" ToRole="UserGroup" />
+        </EntityType>
+        <EntityType Name="UserGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="DataHuynhQuocBaoModel.FK_User_UserGroup" FromRole="UserGroup" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_SanPham_LoaiSP">
+          <End Type="DataHuynhQuocBaoModel.LoaiSP" Role="LoaiSP" Multiplicity="0..1" />
+          <End Type="DataHuynhQuocBaoModel.SanPham" Role="SanPham" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="LoaiSP">
+              <PropertyRef Name="IDLoai" />
+            </Principal>
+            <Dependent Role="SanPham">
+              <PropertyRef Name="IDLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_Order">
+          <End Type="DataHuynhQuocBaoModel.Order" Role="Order" Multiplicity="1" />
+          <End Type="DataHuynhQuocBaoModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Order">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="OrderID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_OrderDetail_SanPham">
+          <End Type="DataHuynhQuocBaoModel.SanPham" Role="SanPham" Multiplicity="1" />
+          <End Type="DataHuynhQuocBaoModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SanPham">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="ProductID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_User_UserGroup">
+          <End Type="DataHuynhQuocBaoModel.UserGroup" Role="UserGroup" Multiplicity="0..1" />
+          <End Type="DataHuynhQuocBaoModel.User" Role="User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserGroup">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="GroupID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <ComplexType Name="getuser_Result">
+          <Property Type="Int32" Name="IDUser" Nullable="false" />
+          <Property Type="String" Name="UserName" Nullable="true" MaxLength="300" />
+          <Property Type="String" Name="Pass" Nullable="true" MaxLength="300" />
+          <Property Type="Int32" Name="GroupID" Nullable="true" />
+          <Property Type="String" Name="Name" Nullable="true" MaxLength="300" />
+        </ComplexType>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DataHuynhQuocBaoModelStoreContainer" CdmEntityContainer="DataHuynhQuocBaoEntities">
+          <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_alterdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_creatediagram" />
+          <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_dropdiagram" />
+          <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="DataHuynhQuocBaoModel.Store.sp_helpdiagramdefinition">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.sp_helpdiagramdefinition_Result">
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="DataHuynhQuocBaoModel.Store.sp_helpdiagrams">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.sp_helpdiagrams_Result">
+                <ScalarProperty Name="Database" ColumnName="Database" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Owner" ColumnName="Owner" />
+                <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="DataHuynhQuocBaoModel.Store.sp_renamediagram" />
+          <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="DataHuynhQuocBaoModel.Store.sp_upgraddiagrams" />
+          <FunctionImportMapping FunctionImportName="getloaisp" FunctionName="DataHuynhQuocBaoModel.Store.getloaisp">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.getloaisp_Result">
+                <ScalarProperty Name="IDLoai" ColumnName="IDLoai" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <EntitySetMapping Name="LoaiSP">
+            <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.LoaiSP">
+              <MappingFragment StoreEntitySet="LoaiSP">
+                <ScalarProperty Name="Anh" ColumnName="Anh" />
+                <ScalarProperty Name="TenLoai" ColumnName="TenLoai" />
+                <ScalarProperty Name="IDLoai" ColumnName="IDLoai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order">
+            <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.Order">
+              <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="ShipEmail" ColumnName="ShipEmail" />
+                <ScalarProperty Name="ShipAddress" ColumnName="ShipAddress" />
+                <ScalarProperty Name="ShipMobile" ColumnName="ShipMobile" />
+                <ScalarProperty Name="ShipName" ColumnName="ShipName" />
+                <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="OrderDetail">
+            <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.OrderDetail">
+              <MappingFragment StoreEntitySet="OrderDetail">
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SanPham">
+            <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.SanPham">
+              <MappingFragment StoreEntitySet="SanPham">
+                <ScalarProperty Name="IDLoai" ColumnName="IDLoai" />
+                <ScalarProperty Name="Gia" ColumnName="Gia" />
+                <ScalarProperty Name="Hinh" ColumnName="Hinh" />
+                <ScalarProperty Name="TenSP" ColumnName="TenSP" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserGroup">
+            <EntityTypeMapping TypeName="DataHuynhQuocBaoModel.UserGroup">
+              <MappingFragment StoreEntitySet="UserGroup">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="getuser" FunctionName="DataHuynhQuocBaoModel.Store.getuser">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DataHuynhQuocBaoModel.getuser_Result">
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="Pass" ColumnName="Pass" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

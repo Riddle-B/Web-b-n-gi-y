@@ -1,0 +1,29 @@
+﻿@model DoAnHuynhQuocBao.Models.SanPham
+@{
+    ViewBag.Title = "Edit";
+
+}
+
+<h2>Chỉnh sửa sản phẩm</h2>
+<form role="form" method="post" action="~/admin/NuA/Edit" enctype="multipart/form-data">
+    <div class="form-group">
+        <input type="hidden" class="form-control" value="@Model.ID" id="id" name="id" placeholder="Mã sản phẩm" />
+    </div>
+    <div class="form-group"
+        <label for="name"> Tên sản phẩm </label>
+        <input type="text" class="form-control" value="@Model.TenSP" id="TenSP" name="TenSP" placeholder="Tên sản phẩm" />
+    </div>
+    <div class="form-group">
+        <label for="gia"> Giá tiền </label>
+        <input type="text" class="form-control" value="@Model.Gia" id="Gia" name="Gia" placeholder="Giá tiền" />
+    </div>
+    <div> <img src="~/upload/@Model.Hinh" style="width:150px;height:210px;" /></div>
+    <div class="form-group">
+        <input type="file" id="hinh" name="hinh" accept="upload/*" />
+    </div>
+    <div class="form-group">
+        <label for="LoaiSP">Loại sản phẩm</label>
+        @Html.DropDownListFor(model => model.LoaiSP.IDLoai, ViewBag.IDLoai as SelectList, "--Nhập loại sản phẩm--", new { @class = "form-control text-center" })
+    </div>
+    <button type="submit" class="btn btn-default">Save</button>
+</form>

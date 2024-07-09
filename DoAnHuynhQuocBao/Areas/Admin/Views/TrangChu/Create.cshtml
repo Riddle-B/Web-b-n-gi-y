@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Thêm sản phẩm mới</h2>
+<form role="form" method="post" action="~/Admin/TrangChu/Create" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="name"> Tên sản phẩm </label>
+        <input type="text" class="form-control" id="TenSP" name="TenSP" placeholder="Tên sản phẩm" />
+    </div>
+    <div class="form-group">
+        <label for="gia"> Giá tiền </label>
+        <input type="text" class="form-control" id="Gia" name="Gia" placeholder="Giá tiền" />
+    </div>
+    <div class="form-group">
+        <label for="LoaiSP">Loại sản phẩm</label>
+        <select style="width: auto" name="IDLoai" onchange="document.getElementById('selected_text').value=this.options[this.selectedIndex].text">
+            @{
+                foreach (var i in ViewBag.IDLoai)
+                {
+                    <option value="@i.IDLoai">@i.TenLoai</option>
+                }
+            }
+        </select>
+    </div>
+    <div class="form-group">
+        <input type="file" id="Hinh" name="Hinh" accept="image/*" />
+    </div>
+    <button type="submit" class="btn btn-default">Lưu</button>
+</form>
+
+

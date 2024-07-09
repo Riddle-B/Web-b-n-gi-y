@@ -1,0 +1,26 @@
+﻿@model IEnumerable<DoAnHuynhQuocBao.Models.SanPham>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="display:block;width:100%">Women's Shoes</h2>
+<div class="row">
+    @foreach (var item in ViewBag.splist)
+    {
+
+
+        <div class="col-sm-4" style="width:24.33%; position: relative; margin-top: 30px">
+            <div class="thumbnail">
+                <div style="width: 100%;height: 440px"><a><img src="~/Upload/@item.Hinh" style="object-fit: fill; width: 100%; height: 100%" /></a></div>
+                <div class="caption">@item.TenSP</div>
+                <div class="caption">@item.Gia₫</div>
+                <div>
+                    <a href="~/Cart/AddItem?productId=@item.ID&quantity=1" class="adtocart">
+                        <span style="font-size: 20px" class="glyphicon glyphicon-shopping-cart"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

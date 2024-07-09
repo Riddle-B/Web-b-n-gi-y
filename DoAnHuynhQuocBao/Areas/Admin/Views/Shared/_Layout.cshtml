@@ -1,0 +1,139 @@
+﻿
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link rel="stylesheet" href="~/slide/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/slide/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/slide/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="~/slide/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="~/slide/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="~/slide/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/slide/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/slide/css/style.css" type="text/css">
+    <link rel="stylesheet" href="~/Content/footer.css" />
+    @Styles.Render("~/Content/footer.css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" style="background-color:white">
+        <div class="container" style="display: flex;flex-direction: row;flex-wrap: nowrap; align-items: center;">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="~/Admin/TrangChu/Index"><img src="~/Upload/logo.png" style="width: 65px" /></a>
+            </div>
+            <div class="navbar-collapse collapse" style="display: flex !important;align-items: center; justify-content: space-between;">
+                <ul class="nav navbar-nav" style="display:flex;flex-direction: row;">
+                    <li>@Html.ActionLink("Men", "Index", "NamA")</li>
+                    <li>@Html.ActionLink("Women", "Index", "NuA")</li>
+                    <li>@Html.ActionLink("Kid", "Index", "KidA")</li>
+                </ul>
+                <ul class="nav navbar-nav" style="">
+                    <li>
+                        <form action="~/Home/Index" method="get" class="form-inline">
+                            <div class="input-group" style="width: 270px; padding:9px 0 9px 0;display: flex;">
+                                <input type="text" name="SearchString" class="form-control float-right" placeholder="Nhập tên sản phẩm">
+                                <div class="input-group-append">
+                                    <button type="submit" class="btn btn-default">
+                                        <i class="glyphicon glyphicon-search"></i>
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+                @{
+                    if (Request.Cookies["username"] == null && Request.Cookies["password"] == null)
+                    {
+                        <ul class="nav navbar-nav navbar-right" style="display: flex;flex-direction: row;">
+                            <li><a href="~/Admin/Login/Index"><span class="glyphicon glyphicon-user "></span> Login</a></li>
+                            <li><a href="~/Admin/SignUp/Index"><span class="glyphicon glyphicon-user "></span> Sign up</a></li>
+                        </ul>
+                    }
+                    else
+                    {
+                                <div class="btn-group">
+                                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        @*Doi mat khau*@
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="~/Admin/Login/changepass">Đổi mật khẩu</a></li>
+                                        <li><a href="~/Admin/Login/SignOut">Log out</a></li>
+                                    </ul>
+                                </div>
+
+
+                    }
+                }
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content" style="margin-top: 60px">
+        @RenderBody()
+
+    </div>
+    <hr />
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3 style="color: #808080">Shop</h3>
+                <ul>
+                    <li><a style="color: #efefef" href="~/Views/Nam/Index.cshtml">Men</a></li>
+                    <li><a style="color: #efefef" href="~/Views/Nu/Index.cshtml">Women</a></li>
+                    <li><a style="color: #efefef" href="~/Views/Kid/Index.cshtml">Kids</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: #808080">Contact</h3>
+                <ul style="">
+                    <li><a style="color: #efefef" href="https://www.google.com/maps/search/Nike">FIND A STORE</a></li>
+                    <li><a style="color: #efefef" href="https://www.facebook.com/baohuynh2809">FACEBOOK</a></li>
+                    <li><a style="color: #efefef" href="https://www.instagram.com/baobaoo28/">INSTAGRAM</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 style="color: #808080">About Us</h3>
+                <ul>
+                    <li style="color: #efefef"><label><b>Địa chỉ của bạn: </b>165 Kp. Bình Dương, Phường Long Bình Tân, <br />Thành phố Biên Hoà, Tỉnh Đồng Nai</label></li>
+                    <li style="color: #efefef"><label><b>Số điện thoại: </b>0933163309</label></li>
+                    <li style="color: #efefef"><lable><b>Email: </b>huynhquocbao2809@gmail.com</lable></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-section">
+            <div class="footer-bottom" style="text-align: center;">
+                <p style="margin-top: 50px; font-size: 13px">© 2023 Nike, Inc. All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="~/slide/js/jquery-3.3.1.min.js"></script>
+    <script src="~/slide/js/bootstrap.min.js"></script>
+    <script src="~/slide/js/jquery.nice-select.min.js"></script>
+    <script src="~/slide/js/jquery-ui.min.js"></script>
+    <script src="~/slide/js/jquery.slicknav.js"></script>
+    <script src="~/slide/js/mixitup.min.js"></script>
+    <script src="~/slide/js/owl.carousel.min.js"></script>
+    <script src="~/slide/js/main.js"></script>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

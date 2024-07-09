@@ -1,0 +1,51 @@
+﻿@model List<DoAnHuynhQuocBao.Models.CartItem>
+
+@section scripts{
+
+    <script src="~/Scripts/Controllers/cartController.js"></script>
+}
+<h2 style="display:block;width:100%">GIỎ HÀNG CỦA BẠN</h2>
+<div class="content">
+    <div class="section group">
+        @if (Model.Count > 0)
+        {
+            <table class="table">
+                <thead>
+                    <tr>
+                        <td>Mã SP</td>
+                        <td>Tên SP</td>
+                        <td>Số lượng</td>
+                        <td>Đơn giá</td>
+                        <td>Thành tiền</td>
+                        <td></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.product.ID</td>
+                            <td>@item.product.TenSP</td>
+
+                            <td><input type="number" class="txtQuantity" data-id="@item.product.ID" value="@item.Quantity" /></td>
+                            <td>@item.product.Gia₫</td>
+                            <td>@(Convert.ToDecimal(item.product.Gia * item.Quantity))₫</td>
+                            <td><a href="#" data-id="@item.product.ID" class="btn-delete">Xoá</a></td>
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+
+            <button id="btnContinue" class="btn btn-default">Tiếp tục mua hàng</button>
+            <button id="btnUpdate" class="btn btn-default">Cập nhật giỏ hàng</button>
+            <button id="btnDeleteAll" class="btn btn-default">Xoá giỏ hàng</button>
+            <button id="btnPayment" class="btn btn-default">Thanh toán</button>
+        }
+        else
+        {
+            <span class="alert alert-danger">Chưa có sản phẩm nào trong giỏ hàng</span>
+        }
+
+    </div>
+</div>

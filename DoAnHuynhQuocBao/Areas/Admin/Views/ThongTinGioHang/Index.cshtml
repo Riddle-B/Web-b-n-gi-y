@@ -1,0 +1,35 @@
+﻿@model IEnumerable<DoAnHuynhQuocBao.Models.Order>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="display:block;width:100%">GIỎ HÀNG CỦA BẠN</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <td>Tên người mua</td>
+            <td>Số điện thoại</td>
+            <td>Địa chỉ</td>
+            <td>Email</td>
+            <td>Ngày đặt</td>
+            <td>Tình trạng</td>
+            <td>Tổng tiền</td>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+
+        <tr>
+            <td>@item.ShipName</td>
+            <td>@item.ShipMobile</td>
+            <td>@item.ShipAddress</td>
+            <td>@item.ShipEmail</td>
+            <td>@item.CreatedDate</td>
+            <td>@item.Status</td>
+            <td>@item.TongTien</td>
+        </tr>
+    }
+    
+</table>
+

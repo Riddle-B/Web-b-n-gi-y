@@ -1,0 +1,22 @@
+﻿@*@using DoAnHuynhQuocBao.Farmework
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    string key = Request.QueryString["key"];
+    List<DoAnHuynhQuocBao.Models.SanPham> result = new List<DoAnHuynhQuocBao.Models.SanPham>();
+}
+
+<h2>Search @key</h2>
+
+@{ 
+    if(key == "" || key.Length<3)
+    {
+        <h3>Vui lòng nhập từ khoá</h3>
+    }
+    else
+    {
+        result = new 
+    }
+}*@
+

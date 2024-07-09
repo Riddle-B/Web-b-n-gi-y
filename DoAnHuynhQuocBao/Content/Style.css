@@ -1,0 +1,41 @@
+﻿footer {
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap:inherit;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer-column {
+    flex-basis: 30%;
+    margin-bottom: 10px;
+}
+.thumbnail{
+    width: 250px;
+    height: 400px
+}
+
+.col-md-4{
+    width: 24.3333%;
+}
+.col-md-8 {
+    margin: 0 auto;
+}
+
+
+
+    
+
+

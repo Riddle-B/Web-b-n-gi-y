@@ -1,0 +1,285 @@
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\ApplicationInsights.config
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\csc.exe
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Collections.Immutable.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Reflection.Metadata.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\vbc.exe
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe.config
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll.config
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.pdb
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.Web.Infrastructure.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\WebGrease.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.pdb
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.xml
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.csprojResolveAssemblyReference.cache
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.dll
+D:\Hoc\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.pdb
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\ApplicationInsights.config
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\csc.exe
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Collections.Immutable.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Reflection.Metadata.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\vbc.exe
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe.config
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll.config
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.pdb
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.Web.Infrastructure.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\WebGrease.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.pdb
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.xml
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.csprojResolveAssemblyReference.cache
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.dll
+E:\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.pdb
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\ApplicationInsights.config
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\csc.exe
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CSharp.Core.targets
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Collections.Immutable.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Reflection.Metadata.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\vbc.exe
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe.config
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll.config
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.pdb
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Agent.Intercept.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.PerfCounterCollector.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.Web.Infrastructure.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\WebGrease.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.pdb
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.xml
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.csprojResolveAssemblyReference.cache
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.dll
+G:\New folder\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.pdb
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\ApplicationInsights.config
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\csc.exe
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Collections.Immutable.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Reflection.Metadata.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\vbc.exe
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe.config
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll.config
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.pdb
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.Web.Infrastructure.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\WebGrease.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.pdb
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.xml
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.csprojResolveAssemblyReference.cache
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.dll
+D:\Hoc\Bao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.pdb
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\ApplicationInsights.config
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\csc.exe
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Collections.Immutable.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\System.Reflection.Metadata.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\vbc.exe
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\roslyn\VBCSCompiler.exe.config
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll.config
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\DoAnHuynhQuocBao.pdb
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Agent.Intercept.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.Web.Infrastructure.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\WebGrease.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\EntityFramework.SqlServer.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.DependencyCollector.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.Web.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.AI.WindowsServer.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.ApplicationInsights.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Helpers.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Mvc.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Optimization.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.Razor.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Deployment.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\System.Web.WebPages.Razor.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Antlr3.Runtime.pdb
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\bin\Newtonsoft.Json.xml
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.csprojResolveAssemblyReference.cache
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.dll
+D:\Hoc\DoAnVaBaoCaoHuynhQuocBao\DoAnHuynhQuocBao\DoAnHuynhQuocBao\obj\Debug\DoAnHuynhQuocBao.pdb
